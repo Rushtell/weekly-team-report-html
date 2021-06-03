@@ -7,7 +7,7 @@
   <title>Fill out a report</title>
 </head>
 <body class="mh-100 w-100 p-0 m-0 bg-light">
-  ${require("./src/components/nav-bar.html")}
+${require("./src/components/nav_bar.html")}
 <div class="container-fluid p-0 m-0">
   <div class="row p-0 m-0">
     ${require("./src/components/aside.html")}
@@ -178,7 +178,14 @@
             <div class="extra-input mx-auto">
               <div class="text-start mb-5">
                 <label for="date" class="form-label">Choose date</label>
-                <input class="form-control form-control-lg border-0" id="date">
+                <select class="form-select form-select-lg text-secondary border-0" id="date">
+                  <option value="current" selected>
+                    Current period: May 30 - June 5
+                  </option>
+                  <option value="previous">
+                    Previous period: May 23 - May 29
+                  </option>
+                </select>
               </div>
               <div class="text-center">
                 <p class="text-danger fw-bold small">All fields are required unless marked as optional.</p>
@@ -188,11 +195,10 @@
           </div>
         </form>
       </main>
-      ${require("./src/components/feedback-btn.html")}
-      ${require("./src/components/support-btn.html")}
+      ${require("./src/components/feedback_btn.html")}
+      ${require("./src/components/support_btn.html")}
     </div>
   </div>
-  ${require("./src/components/modal.html")}
 </div>
 </body>
 </html>
